@@ -1,5 +1,5 @@
 {
-  "FilePath": "d:\\Semester 6-Morvie\\backend\\Microservices\\Review\\ReviewService\\ReviewService.csproj",
+  "FilePath": "d:\\Semester 6-Morvie\\OcelotApiGateway\\OcelotApiGateway.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "6.0",
@@ -16295,7 +16295,7 @@
     ],
     "CSharpLanguageVersion": 1000
   },
-  "RootNamespace": "ReviewService",
+  "RootNamespace": "OcelotApiGateway",
   "Documents": [],
   "SerializationFormat": "0.2"
 }

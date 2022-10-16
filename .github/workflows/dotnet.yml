@@ -12,7 +12,7 @@ jobs:
     
     defaults:
       run:
-        working-directory: "./backend/Microservices/ReviewService"
+        working-directory: "./backend/Microservices/Review/ReviewService"
 
     steps:
     - uses: actions/checkout@v3
