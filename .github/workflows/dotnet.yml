@@ -1,8 +1,13 @@
 name: .NET
 
 on:
-  push:    
+ push:
+    branches: [ "**" ]
+    paths: ["backend/**"]
+    
   pull_request:
+    branches: [ "main" ]
+    paths: ["backend/**"]
 
 jobs:
   build:
@@ -11,7 +16,7 @@ jobs:
     
     defaults:
       run:
-        working-directory: "./backend/ReviewService"
+        working-directory: "./backend/**"
 
     steps:
     - uses: actions/checkout@v3
