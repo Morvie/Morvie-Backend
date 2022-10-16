@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  reviewservice:
+    image: ${DOCKER_REGISTRY-}reviewservice
+    build:
+      context: .
+      dockerfile: backend/Microservices/Review/ReviewService/Dockerfile
+
+  ocelotapigateway:
+    image: ${DOCKER_REGISTRY-}ocelotapigateway
+    build:
+      context: .
+      dockerfile: OcelotApiGateway/Dockerfile
+

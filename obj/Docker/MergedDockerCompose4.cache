@@ -1,0 +1,68 @@
+services:
+  ocelotapigateway:
+    build:
+      context: D:\Semester 6-Morvie
+      dockerfile: OcelotApiGateway/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: OcelotApiGateway
+      target: base
+    container_name: OcelotApiGateway
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: ''
+    image: ocelotapigateway:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net6.0/OcelotApiGateway.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - target: 80
+    tty: true
+    volumes:
+    - D:\Semester 6-Morvie\OcelotApiGateway:/app:rw
+    - C:\Users\goert\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\goert\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\goert\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Users\goert\.nuget\packages:/root/.nuget/packages:ro
+    - D:\Semester 6-Morvie:/src:rw
+  reviewservice:
+    build:
+      context: D:\Semester 6-Morvie
+      dockerfile: backend/Microservices/Review/ReviewService/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: ReviewService
+      target: base
+    container_name: ReviewService
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: ''
+    image: reviewservice:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net6.0/ReviewService.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - target: 80
+    - target: 443
+    tty: true
+    volumes:
+    - D:\Semester 6-Morvie\backend\Microservices\Review\ReviewService:/app:rw
+    - C:\Users\goert\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\goert\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\goert\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Users\goert\.nuget\packages:/root/.nuget/packages:ro
+    - D:\Semester 6-Morvie:/src:rw
+version: '3.4'
