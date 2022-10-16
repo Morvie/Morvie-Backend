@@ -1,12 +1,9 @@
 name: .NET
 
 on:
-  push:
-    paths: ["backend/**"]
-    
+  push:    
   pull_request:
     branches: [ "main" ]
-    paths: ["backend/**"]
 
 jobs:
   build:
