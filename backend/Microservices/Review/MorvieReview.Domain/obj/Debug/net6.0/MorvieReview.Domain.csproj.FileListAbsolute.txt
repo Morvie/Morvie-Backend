@@ -1,0 +1,12 @@
+D:\Semester 6-Morvie\backend\Microservices\Review\MorvieReview.Domain\bin\Debug\net6.0\MorvieReview.Domain.deps.json
+D:\Semester 6-Morvie\backend\Microservices\Review\MorvieReview.Domain\bin\Debug\net6.0\MorvieReview.Domain.dll
+D:\Semester 6-Morvie\backend\Microservices\Review\MorvieReview.Domain\bin\Debug\net6.0\MorvieReview.Domain.pdb
+D:\Semester 6-Morvie\backend\Microservices\Review\MorvieReview.Domain\obj\Debug\net6.0\MorvieReview.Domain.csproj.AssemblyReference.cache
+D:\Semester 6-Morvie\backend\Microservices\Review\MorvieReview.Domain\obj\Debug\net6.0\MorvieReview.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Semester 6-Morvie\backend\Microservices\Review\MorvieReview.Domain\obj\Debug\net6.0\MorvieReview.Domain.AssemblyInfoInputs.cache
+D:\Semester 6-Morvie\backend\Microservices\Review\MorvieReview.Domain\obj\Debug\net6.0\MorvieReview.Domain.AssemblyInfo.cs
+D:\Semester 6-Morvie\backend\Microservices\Review\MorvieReview.Domain\obj\Debug\net6.0\MorvieReview.Domain.csproj.CoreCompileInputs.cache
+D:\Semester 6-Morvie\backend\Microservices\Review\MorvieReview.Domain\obj\Debug\net6.0\MorvieReview.Domain.dll
+D:\Semester 6-Morvie\backend\Microservices\Review\MorvieReview.Domain\obj\Debug\net6.0\refint\MorvieReview.Domain.dll
+D:\Semester 6-Morvie\backend\Microservices\Review\MorvieReview.Domain\obj\Debug\net6.0\MorvieReview.Domain.pdb
+D:\Semester 6-Morvie\backend\Microservices\Review\MorvieReview.Domain\obj\Debug\net6.0\ref\MorvieReview.Domain.dll
