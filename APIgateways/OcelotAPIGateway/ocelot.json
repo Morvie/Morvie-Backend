@@ -1,0 +1,19 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5100"
+  },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/gateway/review",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/review",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "reviewservice",
+          "Port": 80
+        }
+      ]
+    }
+  ]
+}

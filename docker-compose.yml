@@ -1,0 +1,24 @@
+version: '3.4'
+
+networks:
+  backend:
+
+services:
+  ocelotapigateway:
+    image: ${DOCKER_REGISTRY-}ocelotapigateway
+    build:
+      context: .
+      dockerfile: APIgateways/OcelotAPIGateway/Dockerfile
+    ports:
+    - 5100:80
+    networks:
+    - backend
+
+
+  reviewservice:
+    image: ${DOCKER_REGISTRY-}reviewservice
+    build:
+      context: .
+      dockerfile: backend/Microservices/Review/ReviewService/Dockerfile
+    networks:
+    - backend

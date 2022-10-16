@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>Morvie_Review.Infrastructure</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MorvieReview.Application\MorvieReview.Application.csproj" />
+    <ProjectReference Include="..\MorvieReview.Domain\MorvieReview.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

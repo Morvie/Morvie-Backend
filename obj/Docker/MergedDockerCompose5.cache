@@ -1,0 +1,25 @@
+services:
+  ocelotapigateway:
+    build:
+      context: D:\Semester 6-Morvie
+      dockerfile: OcelotApiGateway/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: ocelotapigateway
+    ports:
+    - target: 80
+  reviewservice:
+    build:
+      context: D:\Semester 6-Morvie
+      dockerfile: backend/Microservices/Review/ReviewService/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: reviewservice
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\goert\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\goert\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

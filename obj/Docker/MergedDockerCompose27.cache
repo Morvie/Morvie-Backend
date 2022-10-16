@@ -1,0 +1,28 @@
+networks:
+  backend: {}
+services:
+  ocelotapigateway:
+    build:
+      context: D:\Semester 6-Morvie
+      dockerfile: APIgateways/OcelotAPIGateway/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: ocelotapigateway
+    networks:
+      backend: {}
+    ports:
+    - published: 5100
+      target: 80
+    - target: 80
+  reviewservice:
+    build:
+      context: D:\Semester 6-Morvie
+      dockerfile: backend/Microservices/Review/ReviewService/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: reviewservice
+    ports:
+    - target: 80
+    volumes:
+    - C:\Users\goert\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

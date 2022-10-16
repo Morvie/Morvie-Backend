@@ -1,0 +1,11 @@
+services:
+  apigateway:
+    build:
+      context: D:\Semester 6-Morvie
+      dockerfile: APIgateways/APIGateway/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: apigateway
+    ports:
+    - target: 80
+version: '3.4'
