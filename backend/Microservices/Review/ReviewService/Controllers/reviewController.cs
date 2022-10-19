@@ -8,7 +8,7 @@ using MorvieReview.Models;
 namespace MorvieReview.API.Controllers
 {
     [Route("[controller]")]
-    [ApiController] 
+    [ApiController]
     public class ReviewController : Controller
     {
         private readonly IMediator _mediator;
@@ -23,7 +23,7 @@ namespace MorvieReview.API.Controllers
         {
             var query = new GetAllReviewsQuery();
             var result = await _mediator.Send(query);
-            
+
             List<ReviewModel> reviews = new();
             foreach (var review in result)
             {
@@ -36,7 +36,8 @@ namespace MorvieReview.API.Controllers
         public async Task<ActionResult<ReviewModel>> Get(Guid reviewId)
         {
             var result = await _mediator.Send(new GetReviewQuery(reviewId));
-            var review = new ReviewModel(){ 
+            var review = new ReviewModel()
+            {
                 Id = result.Id,
                 Name = result.Name,
                 Description = result.Description
@@ -45,6 +46,7 @@ namespace MorvieReview.API.Controllers
             return new OkObjectResult(review);
         }
 
+        [IgnoreAntiforgeryToken(Order = 1000)]
         [HttpPost]
         public async Task<ActionResult> Create(string name, string description)
         {
