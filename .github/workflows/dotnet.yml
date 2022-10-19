@@ -38,5 +38,5 @@ jobs:
     - name: SonarQube Scan
       uses: kitabisa/sonarqube-action@v1.2.0
       with:
-        host: 0.0.0.0:9000
+        host: 172.17.0.2:9000
         login: ${{ secrets.SONAR_TOKEN }}
