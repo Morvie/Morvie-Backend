@@ -31,9 +31,9 @@ jobs:
     needs: sonarqube
     runs-on: ubuntu-latest
       
-      defaults:
-        run:
-          working-directory: "./backend/Microservices/Review/ReviewService"
+    defaults:
+      run:
+        working-directory: "./backend/Microservices/Review/ReviewService"
 
       steps:
       - uses: actions/checkout@v3
