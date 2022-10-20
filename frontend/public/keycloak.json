@@ -1,0 +1,12 @@
+{
+  "realm": "Morvie",
+  "auth-server-url": "http://localhost:8080/",
+  "ssl-required": "external",
+  "resource": "MyApp",
+  "verify-token-audience": true,
+  "credentials": {
+    "secret": "WzxFXhccCm7CEENDfpN2zqpU9M3ioW3E"
+  },
+  "use-resource-role-mappings": true,
+  "confidential-port": 0
+}
