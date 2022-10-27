@@ -49,8 +49,8 @@ namespace MorvieReview.API.Controllers
             return new OkObjectResult(review);
         }
 
-        [IgnoreAntiforgeryToken(Order = 1000)]
         [HttpPost]
+        [AutoValidateAntiforgeryToken]
         public async Task<ActionResult> Create(string name, string description)
         {
             ReviewModel movie = new(Guid.NewGuid(), name, description);
