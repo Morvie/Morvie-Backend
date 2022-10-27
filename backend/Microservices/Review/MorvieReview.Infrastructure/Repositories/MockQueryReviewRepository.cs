@@ -10,25 +10,25 @@ namespace MorvieReview.Infrastructure.Repositories
 {
     public class MockQueryReviewRepository : IQueryReviewRepository
     {
-        public List<ReviewDTO> reviewDTOs { get; set; }
+        public List<ReviewDto> reviewDTOs { get; set; }
 
         public MockQueryReviewRepository()
         {
-            reviewDTOs = new List<ReviewDTO>()
+            reviewDTOs = new List<ReviewDto>()
             {
-                new ReviewDTO()
+                new ReviewDto()
                 {
                     Id = new Guid("93a87c60-7e94-48e9-8bec-5a23b81f8631"),
                     Name = "Star Wars VI: Return of the Jedi",
                     Description = "The movie was great, I cleary enjoyed this movie!"
                 },
-                new ReviewDTO()
+                new ReviewDto()
                 {
                     Id = Guid.NewGuid(),
                     Name = "Dune",
                     Description = "It was okay"
                 },
-                new ReviewDTO()
+                new ReviewDto()
                 {
                     Id = Guid.NewGuid(),
                     Name = "Justice League",
@@ -36,14 +36,14 @@ namespace MorvieReview.Infrastructure.Repositories
                 }
             };
         }
-        public async Task<IEnumerable<ReviewDTO>> GetAll()
+        public async Task<IEnumerable<ReviewDto>> GetAll()
         {
             return reviewDTOs;
         }
 
-        public async Task<ReviewDTO> GetById(Guid id)
+        public async Task<ReviewDto> GetById(Guid id)
         {
-            ReviewDTO? review = null;
+            ReviewDto? review = null;
             foreach (var i in reviewDTOs)
             {
                 if (i.Id.Equals(id))
