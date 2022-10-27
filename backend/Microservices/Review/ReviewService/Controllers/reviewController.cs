@@ -1,5 +1,4 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MorvieReview.Application.Commands;
 using MorvieReview.Application.Queries.GetAllReviews;
@@ -10,9 +9,8 @@ namespace MorvieReview.API.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = "Bearer", Roles = "Admin")]
-    public class ReviewController : ControllerBase
-    { 
+    public class ReviewController : Controller
+    {
         private readonly IMediator _mediator;
         public ReviewController(IMediator mediator)
         {
@@ -33,7 +31,6 @@ namespace MorvieReview.API.Controllers
             }
             return reviews;
         }
-
 
         [HttpGet("{reviewId}")]
         public async Task<ActionResult<ReviewModel>> Get(Guid reviewId)

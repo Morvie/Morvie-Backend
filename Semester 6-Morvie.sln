@@ -20,7 +20,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MorvieReview.Domain", "back
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MorvieReview.Application", "backend\Microservices\Review\MorvieReview.Application\MorvieReview.Application.csproj", "{C8761616-05E7-4862-BAE6-60EE0A9928E4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OcelotAPIGateway", "APIgateways\OcelotAPIGateway\OcelotAPIGateway.csproj", "{920B5E7C-9865-44F6-A5E8-C0A99794C6B4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotAPIGateway", "APIgateways\OcelotAPIGateway\OcelotAPIGateway.csproj", "{920B5E7C-9865-44F6-A5E8-C0A99794C6B4}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{D081FCB4-48EC-458B-90FC-98E6AE14BD79}"
 EndProject
