@@ -4,6 +4,7 @@ networks:
   backend:
 
 services:
+
   ocelotapigateway:
     image: ${DOCKER_REGISTRY-}ocelotapigateway
     build:
