@@ -53,5 +53,5 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"Morvie_Semester-6-Morvie" /o:"morvie-sonarcloud" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet build /backend/Microservices/Review/ReviewService
+            dotnet build Semester 6-Morvie.sln
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
