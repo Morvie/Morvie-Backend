@@ -9,6 +9,6 @@ namespace MorvieReview.Application.Interfaces
 {
     public interface ICommandReviewRepository
     {
-        void CreateReview(ReviewDTO review);
+        void CreateReview(ReviewDto review);
     }
 }

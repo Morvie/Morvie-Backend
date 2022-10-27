@@ -15,7 +15,7 @@ namespace MorvieReview.Infrastructure.Repositories
         {
             _repository = new MockQueryReviewRepository();
         }
-        public void CreateReview(ReviewDTO review) { 
+        public void CreateReview(ReviewDto review) { 
             _repository.reviewDTOs.Add(review);
         }
     }

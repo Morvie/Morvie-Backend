@@ -9,7 +9,7 @@ namespace MorvieReview.Application.Interfaces
 {
     public interface IQueryReviewRepository
     {
-        Task<IEnumerable<ReviewDTO>> GetAll();
-        Task<ReviewDTO> GetById(Guid id);
+        Task<IEnumerable<ReviewDto>> GetAll();
+        Task<ReviewDto> GetById(Guid id);
     }
 }

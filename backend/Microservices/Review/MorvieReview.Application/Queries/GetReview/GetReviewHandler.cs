@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace MorvieReview.Application.Queries.GetReview
 {
    
-    public class GetReviewHandler : IRequestHandler<GetReviewQuery, ReviewDTO>
+    public class GetReviewHandler : IRequestHandler<GetReviewQuery, ReviewDto>
     {
         private readonly IQueryReviewRepository _repository;
         public GetReviewHandler(IQueryReviewRepository repository)
@@ -19,7 +19,7 @@ namespace MorvieReview.Application.Queries.GetReview
             _repository = repository;
         }
           
-        public async Task<ReviewDTO> Handle(GetReviewQuery request, CancellationToken cancellationToken)
+        public async Task<ReviewDto> Handle(GetReviewQuery request, CancellationToken cancellationToken)
         {
             var review = await _repository.GetById(request.Id);
             return review;

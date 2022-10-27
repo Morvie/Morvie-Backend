@@ -18,7 +18,7 @@ namespace MorvieReview.Application.Commands
         }
         public Task<bool> Handle(CreateReviewCommand request, CancellationToken cancellationToken)
         {
-            var review = new ReviewDTO()
+            var review = new ReviewDto()
             {
                 Id = request.Id,
                 Name = request.Name,

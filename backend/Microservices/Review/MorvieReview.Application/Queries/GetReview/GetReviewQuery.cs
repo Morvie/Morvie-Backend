@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MorvieReview.Application.Queries.GetReview
 {
-    public class GetReviewQuery:IRequest<ReviewDTO>
+    public class GetReviewQuery:IRequest<ReviewDto>
     {
         public Guid Id { get; set; }   
         public GetReviewQuery(Guid id)
