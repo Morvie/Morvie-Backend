@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MorvieReview.Application.Queries.GetAllReviews
 {
-    public class GetAllReviewsQuery:IRequest<IEnumerable<ReviewDTO>>
+    public class GetAllReviewsQuery:IRequest<IEnumerable<ReviewDto>>
     {
     }
 }

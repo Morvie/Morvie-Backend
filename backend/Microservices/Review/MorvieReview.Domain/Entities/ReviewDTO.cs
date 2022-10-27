@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MorvieReview.Domain.Entities
 {
-    public class ReviewDTO
+    public class ReviewDto
     {
         public Guid Id { get; set; }
         public string? Name { get; set; }
