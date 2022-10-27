@@ -19,3 +19,7 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "OcelotAPIGateway.dll"]
+
+FROM quay.io/keycloak/keycloak:18.0.1
+#Adding custom ENTRYPOINT
+ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "start --proxy=edge" , "--auto-build", "--db=postgres"]
