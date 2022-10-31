@@ -21,11 +21,11 @@
     <td><img src="https://github.com/Morvie/Morvie-Backend/actions/workflows/dotnet.yml/badge.svg" alt="C# compiltation"/></td>
     <td><img src="https://github.com/Morvie/Morvie-Backend/actions/workflows/sonarcloud.yml/badge.svg" alt="SonarCloud"/></td>
     <td><img src="https://github.com/Morvie/Morvie-Backend/actions/workflows/codeQL.yml/badge.svg" atl="CodeQL"/></td>
+    <td><img src="https://sonarcloud.io/api/project_badges/measure?project=Morvie_Semester-6-Morvie&metric=alert_status" atl="Sonarcloud"/></td>
   </tr>
 
 [![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-white.svg)](https://sonarcloud.io/summary/new_code?id=Morvie_Semester-6-Morvie)
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Morvie_Semester-6-Morvie&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Morvie_Semester-6-Morvie)
 </table>
 
 ---
