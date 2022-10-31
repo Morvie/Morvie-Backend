@@ -8,14 +8,14 @@ using OcelotAPIGateway;
 var builder = WebApplication.CreateBuilder(args);
 
 
-const string corsPolicyName = "cors-app-policy";
+const string corsPolicy = "cors-app-policy";
 
-builder.Configuration.AddJsonFile("Ocelot.json");
+builder.Configuration.AddJsonFile("ocelot.json");
 
 //Add services to the container.
 //Add Ocelot configurations.
 
-builder.Services.AddCors(c => c.AddPolicy("CORS_policy", corsPolicyBuilder =>
+builder.Services.AddCors(c => c.AddPolicy(corsPolicy, corsPolicyBuilder =>
 {
     corsPolicyBuilder.WithOrigins("http://localhost:3000")
         .AllowAnyMethod()
@@ -23,7 +23,7 @@ builder.Services.AddCors(c => c.AddPolicy("CORS_policy", corsPolicyBuilder =>
 }));
 
 //Configure JWT
-builder.Services.ConfigureJWT(builder.Environment.IsDevelopment(), "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAidhPtqqZxoWtonBScBTh5PU5aj5gB9rMzpqeuohOnBLxIS8k+bxR4hM4SG2cFAiF/A/e7fJmhk7Xz8OtK8W0tUFc4ilnqOJvVtI8J39++ZU3PmTu3p+hyjjB96rF0O2Y3suOz8fxQSgUTMbTp2V0pJyStmC+8MlSptIQ7NvZA3dJgUiqF5L/u06huSEstpGhld1QZU4zu7QUKCBs/qn6orjxido3+rfaLIlUlnohFrdqRGBXDVQcfrR+09FirdMc/0xCKmkuwUZUMRZLqXk4ZkhxO1GGieOifCTPt1bV0KUDYsxXZny+rb8+Fl8FO1UFNcmuCtEZNLblD7mJJK9Z+wIDAQAB");
+builder.Services.ConfigureJWT(builder.Environment.IsDevelopment(), "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwjoQKGGEUoOY3mUSzs3JrEOmSiLL2QvV94UIRMe71j0zwNvg1eFgNFHu4TYs9h/dZfC+2AVuAxiiHUolGvaAw4oZ4oLA4XmG7WomBWev+bIBF3Ois1CV/z9JwJVARh/rOuhETYmQ+bMXR3AgnQhtC6XKkwqxarVZeYmJutFBCpeagaJ7ptvoJYzjppITrrofx2gfdF4yKbJq1+7J6Dxb7iG41cUq+TndQsKgA4posHr5jWzkyhmIGiLkxXafVWKGnWvtcUqaBcLSK/EvrhQx+MnLT6dgVEYhCZBfMInc9yhVJ8A1qIU9qRJp/BTl6b0yk3QvxGwwTKw54aL63GH0YwIDAQAB");
 
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen(c =>
@@ -56,7 +56,7 @@ builder.Services.AddOcelot(builder.Configuration);
 
 var app = builder.Build();
 
-app.UseCors("CORS_policy");
+app.UseCors(corsPolicy);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
