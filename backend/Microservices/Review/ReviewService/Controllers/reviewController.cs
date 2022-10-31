@@ -10,7 +10,6 @@ namespace MorvieReview.API.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = "Bearer", Roles = "Admin")]
     public class ReviewController : ControllerBase
     { 
         private readonly IMediator _mediator;
@@ -50,7 +49,6 @@ namespace MorvieReview.API.Controllers
         }
 
         [HttpPost]
-        [AutoValidateAntiforgeryToken]
         public async Task<ActionResult> Create(string name, string description)
         {
             ReviewModel movie = new(Guid.NewGuid(), name, description);

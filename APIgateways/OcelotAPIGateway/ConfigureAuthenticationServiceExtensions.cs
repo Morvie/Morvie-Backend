@@ -73,7 +73,7 @@ namespace OcelotAPIGateway
                 {
                     ValidateAudience = false,
                     ValidateIssuer = false,
-                    ValidIssuers = new[] { "http://localhost:8080/realms/Morvie" },
+                    ValidIssuers = new[] { "http://host.docker.internal:2222/realms/Morvie" },
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = BuildRSAKey(publicKeyJWT),
                     ValidateLifetime = true
@@ -94,7 +94,7 @@ namespace OcelotAPIGateway
                     {
                         c.NoResult();
 
-                        c.Response.StatusCode = 500;
+                        c.Response.StatusCode = 407;
                         c.Response.ContentType = "text/plain";
 
                         if (IsDevelopment)

@@ -10,8 +10,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5200
+          "Host": "reviewservice",
+          "Port": 80
         }
       ],
       "AuthenticationOptions": {
@@ -26,8 +26,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5200
+          "Host": "reviewservice",
+          "Port": 80
         }
       ],
       "AuthenticationOptions": {

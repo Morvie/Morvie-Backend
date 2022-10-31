@@ -1,6 +1,6 @@
 {
   "realm": "Morvie",
-  "auth-server-url": "http://localhost:8080/",
+  "auth-server-url": "http://localhost:2222/",
   "ssl-required": "external",
   "resource": "MyApp",
   "public-client": true,
