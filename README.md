@@ -24,7 +24,7 @@
     <td><img src="https://sonarcloud.io/api/project_badges/measure?project=Morvie_Semester-6-Morvie&metric=alert_status" atl="Sonarcloud"/></td>
   </tr>
 
-  <a href = "https://sonarcloud.io/summary/new_code?id=Morvie_Semester-6-Morvie"><img src="https://sonarcloud.io/images/project_badges/sonarcloud-white.svg" alt="Sonarcloud" align="center"/>
+  <a align="center" href = "https://sonarcloud.io/summary/new_code?id=Morvie_Semester-6-Morvie"><img src="https://sonarcloud.io/images/project_badges/sonarcloud-white.svg" alt="Sonarcloud" align="center"/>
   </a>
 
 </table>
