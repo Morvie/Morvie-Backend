@@ -15,7 +15,7 @@
 ---
 
 <!-- markdownlint-disable -->
-## Project Status[![](./docs/img/pin.svg)](#project-status)
+## Project Status[![](./docs/img/pin.svg)](#project-status) :chart_with_upwards_trend:
 <table align="center" class="no-border" >
   <tr>
     <td><img src="https://github.com/Morvie/Morvie-Backend/actions/workflows/dotnet.yml/badge.svg" alt="C# compiltation"/></td>
