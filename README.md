@@ -16,6 +16,11 @@
 
 <!-- markdownlint-disable -->
 ## :chart_with_upwards_trend: Project Status[![](./docs/img/pin.svg)](#project-status) 
+<p align="center"> 
+  <a  href = "https://sonarcloud.io/summary/new_code?id=Morvie_Semester-6-Morvie"><img src="https://sonarcloud.io/images/project_badges/sonarcloud-white.svg" alt="Sonarcloud"/>
+  </a>
+</p>
+
 <table align="center" class="no-border" >
   <tr>
     <td><img src="https://github.com/Morvie/Morvie-Backend/actions/workflows/dotnet.yml/badge.svg" alt="C# compiltation"/></td>
@@ -23,11 +28,8 @@
     <td><img src="https://github.com/Morvie/Morvie-Backend/actions/workflows/codeQL.yml/badge.svg" atl="CodeQL"/></td>
     <td><img src="https://sonarcloud.io/api/project_badges/measure?project=Morvie_Semester-6-Morvie&metric=alert_status" atl="Sonarcloud"/></td>
   </tr>
-<table align="center" class="no-border" >
-  <tr>
-    <a  href = "https://sonarcloud.io/summary/new_code?id=Morvie_Semester-6-Morvie"><img src="https://sonarcloud.io/images/project_badges/sonarcloud-white.svg" alt="Sonarcloud"/>
-    </a>
-  </tr>
+
+    
 
 </table>
 
